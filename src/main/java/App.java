@@ -57,8 +57,8 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
 
       Team team = Team.find(Integer.parseInt(request.queryParams("squadId")));
-      String description = request.queryParams("description");
-      Member newMember = new Member(description);
+      String name = request.queryParams("name");
+      Member newMember = new Member(name);
 
       team.addHero(newMember);
 
@@ -69,9 +69,9 @@ public class App {
 
     get("teams/:squadId/members/:heroId", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      Team squad = Team.find(Integer.parseInt(request.params(":squadId")));
-      Member hero = Member.find(Integer.parseInt(request.params(":heroId")));
-      model.put("hero",hero);
+      Team team = Team.find(Integer.parseInt(request.params(":squadId")));
+      Member member = Member.find(Integer.parseInt(request.params(":heroId")));
+      model.put("member", member);
       model.put("template", "templates/member.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

@@ -23,7 +23,6 @@ public class App {
 
     post("/teams", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      // Hero newHero = new Hero("Dong", "Lee", 100);
       String name = request.queryParams("name");
       Team newTeam = new Team(name);
       model.put("template", "templates/team-success.vtl");
@@ -71,6 +70,7 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       Team team = Team.find(Integer.parseInt(request.params(":squadId")));
       Member member = Member.find(Integer.parseInt(request.params(":heroId")));
+      model.put("team", team);
       model.put("member", member);
       model.put("template", "templates/member.vtl");
       return new ModelAndView(model, layout);

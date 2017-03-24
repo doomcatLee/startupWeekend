@@ -1,0 +1,10 @@
+<!--categories.vtl-->
+<h1>All Heros</h1>
+<ul>
+  #foreach ($squad in $squads)
+    <li><a href="/squads/$squad.getId()">$squad.getName()</a></li>
+  #end
+</ul>
+<a href="/squads/new">Add New Squad</a>
+<a href="/squads/$squad.getId()/heros/new">Add a new hero</a>
+<!--categories.vtl-->

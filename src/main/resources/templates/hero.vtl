@@ -1,0 +1,10 @@
+<!--categories.vtl-->
+<h1>Your Hero</h1>
+<ul>
+  #if($hero)
+    <li>$hero.getName()</li>
+  #end
+</ul>
+<a href="/squads/new">Add New Squad</a>
+<a href="/squads/$squad.getId()/heros/new">Add a new hero</a>
+<!--categories.vtl-->

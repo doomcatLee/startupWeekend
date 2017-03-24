@@ -1,0 +1,11 @@
+<!--category.vtl-->
+<h1>$team.getName() Heros:</h1>
+<ul>
+  #foreach($member in $team.getHeros())
+   <a href="/teams/$team.getId()/members/$team.getHeroId($member)"><li>$member.getName()</li></a>
+  #end
+</ul>
+
+<a href="/teams/$team.getId()/members/new">Add a new hero</a>
+<a href="/teams">View all squads</a>
+<!--category.vtl-->

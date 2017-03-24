@@ -1,7 +1,7 @@
 <!--category-tasks-form.vtl-->
-<h1>Add a hero to $squad.getName()</h1>
+<h1>Add a member to $team.getName()</h1>
 
-<form action="/heros" method="post">
+<form action="/members" method="post">
   <input id="squadId" name="squadId" type="hidden" value="$squad.getId()">
 
   <div class="form-group">
@@ -9,6 +9,6 @@
     <input id="description" name="description" type="text" class="form-control">
   </div>
 
-  <button type="submit" class="btn btn-success">Add Task</button>
+  <button type="submit" class="btn btn-success">Add Member</button>
 </form>
 <!--category-tasks-form.vtl-->

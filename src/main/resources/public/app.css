@@ -1,0 +1,19 @@
+body{
+}
+
+
+.container{
+  width: 90%;
+  text-align: center;
+}
+
+a{
+  font-size: 2em;
+}
+button{
+  margin-top: 30px;
+}
+
+li{
+  list-style: none;
+}

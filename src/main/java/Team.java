@@ -19,7 +19,7 @@ public class Team{
     return mName;
   }
 
-  public Member getHero(){
+  public Member getMember(){
     return mMember;
   }
 
@@ -35,7 +35,7 @@ public class Team{
     return mId;
   }
 
-  public int getHeroId(Member member){
+  public int getMemberId(Member member){
     int id = mMembers.indexOf(member) + 1;
     return id;
   }
@@ -44,11 +44,11 @@ public class Team{
     return instances1.get(id-1);
   }
 
-  public List<Member> getHeros(){
+  public List<Member> getMembers(){
     return mMembers;
   }
 
-  public void addHero(Member member) {
+  public void addMember(Member member) {
     mMembers.add(member);
   }
 
